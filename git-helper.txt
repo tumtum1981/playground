@@ -1,0 +1,201 @@
+GitLab
+gitflow
+src tree
+
+GitHub using BenWatsonMSP with benwatson@metsoftpro.com and mspBJW!11
+GitHub using TumTum1981 with jbenwatson@gmail.com and strong for gh
+
+-- general commands -------------------
+cd, 
+ls, 
+mkdir, 
+touch,
+start NotePad++, 
+rm, 
+rmdir
+
+
+tutorial 
+https://www.youtube.com/watch?v=Fhgga2s_RmM&index=6&list=PL4cUxeGkcC9goXbgTDQ0n_4TBzOO0ocPR
+
+-- git commands ----------------------
+git
+ > shows all commands and what they do
+
+
+git config --global user.name BenWatson
+ > set username 
+ 
+git config --global user.email BenWatson@metsoftpro
+ > set email
+
+git config user.name
+ > outputs username
+
+git init
+
+
+git clone <link to repo>
+ - call from the dest folder to dump the repo files
+ 
+git status
+ - shows changes or staged files
+
+git add <filename or . or -a>
+ - stage files (in preparation for commit)
+
+git commit -m "Message to describe change"
+ - lock commit (can add a multline comment by leaving out -m, use Esc+w+q to complete message)
+
+git push
+ - uploaded to master/current branch @ github
+ 
+git pull
+ - get/merge changes from top level repo branch
+
+
+git log
+ - show all commits on current branch
+git log -oneline
+ - show all commits on one line summary
+
+
+ 
+
+ to create new repo of src.
+ - get out project
+ - cd to src folder
+ - git init
+ - git add .
+ (may need to setup ignore files to exlude unwanted files)
+ 
+ 
+ 
+ 
+ 
+      safe    safe   danger
+-- checkout, revert, reset -----------------------
+ 
+git checkout <unique id from log>
+ - revert state of code to previous commit using id (cannot make changes as will make readonly)
+git checkout master 
+ - resync to head of master branch
+
+git revert  <unique id from log>
+ - remove/undo previous commit (text editor asking for commit title, don't change anything> shift+':' then 'wq'
+
+ 
+git reset <unique id from log> --hard
+ - same as above but updates working files to match the that commit version
+git reset  <unique id from log>
+ - will list all the changes that have occurred since the point reverting to (current files are still in editor, so theoretically could merge all commits into one)
+ 
+ 
+-- branches -----------------------------------------------
+git branch <branch-name>
+
+git branch -a
+ > shows all branches (* next to branch I'm on)
+
+have to check out a branch to get on that branch
+git checkout <branch-name>
+
+
+from master
+git branch -D <branch-name>
+ > deletes branch (totally removed any changes event if not merged with master branch)
+ 
+git checkout -b <branch-name>
+ > creates branch and checks out in one go
+ 
+## merging back into master branch ####
+
+from master
+git merge <branch-name>
+ > merge branch back into master
+
+ 
+ 
+-- git hub ------------------------------------------------
+
+##  Create REPO from existing project ##
+>create new repo on github website
+>back on pc in project
+git push <url for github repo> <branch name>
+
+git remote add <alias name> <url for github repo>
+> add an alias name for github url to save having to type whole address
+
+>EXAMPLE: make changes in project
+git add .
+git commin -m "made change"
+git push <alias name> <branch name>
+
+
+## Create REPO on github ##
+>create new repo on github website
+>back on pc
+cd to location want for local project/repo
+git clone <url to github repo>
+cd into repo folder
+>make changes
+git add .
+git commit -m "made changes"
+git remote -v
+ > to see aliases
+git push <alias> <branch>
+ > e.g. git push origin master
+
+ 
+ 
+> make sure on working (master) branch
+git pull <alias> <branch>
+ > updates file sin master branch
+git checkout -b <feature-name>
+ > make changes
+git add .
+git commit -m "make changed"
+git push <alias> <feature-name branch>
+
+> now on github repo click compare & pull request
+> add comments on what done
+click pull request (I want to merge this branch into master branch on github repo)
+> can add comments and view commits and files changed (in chnages can add line by line comments)
+click merge pull request
+can then delete the merge branch if wanted
+
+
+## to make more changes ##
+> back in project
+git checkout master     # switch to local master branch
+git pull <alias> master # pull any changes from master branch on repo
+git checkout -b <branch name>
+> make changes
+git add . 
+git commit -m "made changes"
+git push <alias> <branch name>
+> pushes the new branch bak up to github
+## do another compare and pull, pull request add comment about missing data
+
+# so back onlocal pc make requested change on existing branch (as wasn't yet merged with master)
+git add . 
+git commit -m "made changes"   #make a new commit on the same branch
+git push <alias> <branch name>
+# back on github shold show addional change so can click on merge pull request.
+ 
+ 
+## forking ############################# contribute to open source project...
+from open source project/public repo on github
+copy from publick repo to my acount
+after forking can clone our repo, from destination dir
+git clone <url>
+cd "projetc name"
+> make branch, make changes, add, commit and push back to origin
+click new pull request
+click create pull request
+back in source original repo (not fork) can merge back in 
+
+
+
+
+

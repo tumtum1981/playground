@@ -1,0 +1,11 @@
+# clean old lappy / backup
+# install new linux
+# update/configure new linux
+# sort git repo and sync with work... understand the command and how to run in either
+# start developing some of the ideas
+
+
+ideas
+--------
+
+
