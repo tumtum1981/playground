@@ -59,7 +59,6 @@ git log
 git log -oneline
  - show all commits on one line summary
 
-
  
 
  to create new repo of src.

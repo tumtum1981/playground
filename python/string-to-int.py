@@ -19,7 +19,6 @@ def GetIntValueOfChar(character):
 
 
 
-
 valueAsString = input("Good day, please enter a value:")
 valueAsInt = 0;
 sign=1

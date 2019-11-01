@@ -50,7 +50,6 @@ print(buySellTimeText.format(stockBroker.GetBuyTime(), stockBroker.GetSellTime()
 
 
 
-
 ''' this method only stores the values and not the indexes of the share prices
     def Analyse(self):
         bestLow = stockMarket[0]
