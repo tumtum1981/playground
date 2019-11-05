@@ -1,3 +1,6 @@
+//  $ g++ -Wall stock-market.cpp -o stock-market
+//  $ stock-market
+//  $ ./stock-market
 
 
 //#include <stdio.h>
@@ -5,8 +8,8 @@
 #include <iostream>
 
 //double g_Stocks[] = { 25,15,10,13,14,16,9,8,7,6,3,8,19,5,6,1 };
-//double g_Stocks[] = { 25,15,10,5,10,15,20,25,24,25,15,14,19,21,22,1 };
-double g_Stocks[] = { 5,5,5,5,4,4,4,4,3,3,3,3,2,2,2,2};
+double g_Stocks[] = { 25,15,10,5,10,15,20,25,24,25,15,14,19,21,22,1 };
+//double g_Stocks[] = { 5,5,5,5,4,4,4,4,3,3,3,3,2,2,2,2};
 //double g_Stocks[] = { 1,2,3,4,5,5,5,6,6,6,7,7,7,8,8,9};
 int NUMBER_OF_STOCKS = 16;
 
@@ -14,7 +17,7 @@ int NUMBER_OF_STOCKS = 16;
 void FindBestProfit( double &a_BestProfit, int &a_Buy, int &a_Sell) {
 
   // Init profit to first elements, this will be overridden if better found
-  a_BestProfit=g_Stocks[1]-g_Stocks[0];                                         
+  a_BestProfit=g_Stocks[1]-g_Stocks[0];
   a_Buy=0;                              // can reove and use l_CurrentBestLow
   a_Sell=1;
 
@@ -22,7 +25,7 @@ void FindBestProfit( double &a_BestProfit, int &a_Buy, int &a_Sell) {
   int l_CurrentBestLow=0;
   for (int i=2; i<NUMBER_OF_STOCKS; i++) {
 
-    // 
+    //
     if (g_Stocks[i] < g_Stocks[l_CurrentBestLow]) {
       l_CurrentBestLow = i;
     }
@@ -53,13 +56,15 @@ int main()//_tmain(int argc, _TCHAR* argv[])
     //  , l_BestProfit, l_Buy, l_Sell);
     std::cout << "The biggest profit of the day is ";
     std::cout << l_BestProfit;
+    std::cout << ".\nYou should buy at [" << l_Buy << "]" << " for " << g_Stocks[l_Buy];
+    std::cout << " and sell at [" << l_Sell << "] for " << g_Stocks[l_Sell] << ".\n\n"; 
   } else {
     //printf("No profit was found. Do not buy any stocks, get a cake instead!\n");
     std::cout << "No profit was found. Do not buy any stocks, get a cake instead!\n";
   }
 
   // wait to complete program
-  getchar();
+  //getchar();
 
 	return 0;
 }
