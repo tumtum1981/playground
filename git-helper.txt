@@ -196,5 +196,18 @@ back in source original repo (not fork) can merge back in
 
 
 
+## example ###
+I was using playground on work pc. I opened the git cmd prompt in playground and checked "git status" to see on the base-files branch, even after I created a branch
+>> git branch "fix-case-cpp" 
+I was still on the base-files branch. I had made some changes to file and want to push them. so first to switch branch
+>> git checkout "fix-case-cpp"
+then
+>> git add .
+>> git commit -m "changes to fix gcc linking"
+>> git push https://github.com/tumtum1981/playground fix-case-cpp
+
+then after this I can see the branch on github... to merge into mater for all other (that don't want to checkout that branch) I can create a pull request and merge only on the desktop website when viewing that branch... then will allow me to merge into master.
+
+ 
 
 
