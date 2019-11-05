@@ -1,8 +1,8 @@
 
 
-#include <stdio.h>
-#include <tchar.h>
-
+//#include <stdio.h>
+//#include <tchar.h>
+#include <iostream>
 
 //double g_Stocks[] = { 25,15,10,13,14,16,9,8,7,6,3,8,19,5,6,1 };
 //double g_Stocks[] = { 25,15,10,5,10,15,20,25,24,25,15,14,19,21,22,1 };
@@ -39,7 +39,7 @@ void FindBestProfit( double &a_BestProfit, int &a_Buy, int &a_Sell) {
 }
 
 
-int _tmain(int argc, _TCHAR* argv[])
+int main()//_tmain(int argc, _TCHAR* argv[])
 {
   double l_BestProfit = -1;
   int l_Buy = 0;
@@ -49,10 +49,13 @@ int _tmain(int argc, _TCHAR* argv[])
 
   // display results
   if (l_BestProfit > 0) {
-    printf("The biggest profit of the day is %.2f\nBuy [%d]\nSell [%d]\n\n"
-      , l_BestProfit, l_Buy, l_Sell);
+    //printf("The biggest profit of the day is %.2f\nBuy [%d]\nSell [%d]\n\n"
+    //  , l_BestProfit, l_Buy, l_Sell);
+    std::cout << "The biggest profit of the day is ";
+    std::cout << l_BestProfit;
   } else {
-    printf("No profit was found. Do not buy any stocks, get a cake instead!\n");
+    //printf("No profit was found. Do not buy any stocks, get a cake instead!\n");
+    std::cout << "No profit was found. Do not buy any stocks, get a cake instead!\n";
   }
 
   // wait to complete program
