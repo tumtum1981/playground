@@ -2,8 +2,8 @@ GitLab
 gitflow
 src tree
 
-GitHub using BenWatsonMSP with benwatson@metsoftpro.com and mspBJW!11
-GitHub using TumTum1981 with jbenwatson@gmail.com and strong for gh
+GitHub using BenWatsonMSP
+GitHub using TumTum1981 gmail and and strong for gh
 
 -- general commands -------------------
 cd, 
